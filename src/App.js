@@ -62,20 +62,22 @@ function App() {
       }
        
       </div>
-      <div className='items-center fixed top-[50%] left-[50%] -translate-y-2/4 -translate-x-2/4'>
+        <div className='fixed top-[50%] left-[50%] -translate-y-2/4 -translate-x-2/4 text-[3vmin]'>
         <input value={city} onKeyPress={Weather} 
         onChange={e => setCity(e.target.value)} 
         className = 'border' type='text' 
         placeholder='location...'></input>
+        <div className='fixed top-[53%] left-[90%] -translate-y-2/4 -translate-x-2/4 '>
         <button onClick={Weather}><AiOutlineSearch />
-        </button> 
+        </button>
+        </div> 
       </div>
   <div className='flex justify-around fixed bottom-0 w-full'>
-    {/*
-     <h1>{weatherData.main.humidity} humidity</h1>
-     <h1>{weatherData.main.feels_like} feels like</h1>
-     <h1>{weatherData.wind.speed} Wind Speed</h1>
-    */ }
+     {weatherData && weatherData.main && <h1 className='text-center text-[3vmin]'> {weatherData.main.humidity} %<h1 className='font-bold text-[2.5vmin]'>Humidity</h1> </h1> }
+     {weatherData && weatherData.main && <h1 className=' text-center text-[3vmin]'> {weatherData.main.feels_like} °F<h1 className='font-bold text-[2.5vmin]'>Feels Like</h1> </h1>  }
+     {weatherData && weatherData.wind && <h1 className='text-center text-[3vmin]'> {weatherData.wind.speed} MPH<h1 className='font-bold text-[2.5vmin]'>Wind Speed</h1> </h1>  }
+    
+    
   </div>
     </> 
   );
