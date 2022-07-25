@@ -67,10 +67,10 @@ function App() {
         onChange={e => setCity(e.target.value)} 
         className = 'border' type='text' 
         placeholder='location...'></input>
-
-        <button onClick={Weather}><AiOutlineSearch />
+      <div className=''>
+        <button className='border bg-green-400 p-1 text-[3.3vmin]' onClick={Weather}><AiOutlineSearch />
         </button>
-        
+        </div>
       </div>
   <div className='flex justify-around items-center h-auto'>
      {weatherData && weatherData.main && <h1 className='text-center text-[4vmin]'> {weatherData.main.humidity} %<h1 className='font-bold text-[3.5vmin]'>Humidity</h1> </h1> }
