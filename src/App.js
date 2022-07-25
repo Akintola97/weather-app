@@ -67,7 +67,7 @@ function App() {
         onChange={e => setCity(e.target.value)} 
         className = 'border ' type='text' 
         placeholder='location...'></input>
-      <div className=''>
+      <div className='pt-[.45vmin]'>
         <button className='bg-green-400 p-1 text-[3.5vmin]' onClick={Weather}><AiOutlineSearch />
         </button>
         </div>
