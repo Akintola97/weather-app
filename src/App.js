@@ -65,10 +65,10 @@ function App() {
         <div className='flex items-center justify-center h-[70vmin]'>
         <input value={city} onKeyPress={Weather} 
         onChange={e => setCity(e.target.value)} 
-        className = 'border' type='text' 
+        className = 'border ' type='text' 
         placeholder='location...'></input>
       <div className=''>
-        <button className='border bg-green-400 p-1 text-[3.3vmin]' onClick={Weather}><AiOutlineSearch />
+        <button className='bg-green-400 p-1 text-[3.5vmin]' onClick={Weather}><AiOutlineSearch />
         </button>
         </div>
       </div>
