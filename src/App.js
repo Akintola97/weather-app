@@ -37,16 +37,19 @@ function App() {
   return (
     <div className='w-full h-[100vh] text-center'>
       <div>
+        <h1 className='text-[10vmin] font-bold'>Weather App</h1>
+      </div>
+      <div className='pt-[6vmin]'>
       {typeof weatherData.main === 'undefined' ? (
         <div>
-          <h1 className='font-bold text-[5vmin]'>Please enter a Location</h1>
+          <h2 className='font-bold text-[5vmin]'>Please enter a Location</h2>
         </div>
       ):(
         <div>
-           <h1 className='location text-[15vmin]'>{weatherData.name}</h1>
+           <h1 className='location text-[10vmin]'>{weatherData.name}, {weatherData.sys.country}</h1>
            <div className='flex justify-center'>
-           <h1 className='temperature text-[9vmin]'>{weatherData.main.temp}°F </h1>
-           <h1 className='description text-[9vmin] pl-8'>{weatherData.weather[0].main}</h1>
+           <h1 className='temperature text-[8vmin]'>{weatherData.main.temp}°F </h1>
+           <h1 className='description text-[8vmin] pl-8'>{weatherData.weather[0].description}</h1>
        </div>
         </div>
       )
@@ -62,7 +65,7 @@ function App() {
       }
        
       </div>
-        <div className='flex items-center justify-center h-[70vmin]'>
+        <div className='flex items-center justify-center h-[40vmin]'>
         <input value={city} onKeyPress={Weather} 
         onChange={e => setCity(e.target.value)} 
         className = 'border p-2' type='text' 
